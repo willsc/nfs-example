@@ -3,7 +3,7 @@
 Create a persistent volume with 
 
 ```
-gcloud compute disks create --size=20GB --zone=us-east1-b gce-nfs-disk
+gcloud compute disks create --size=20GB --zone=europe-west2-a gce-nfs-disk
 
 ```
 
