@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox1
+  namespace: nfs
+spec:
+  containers:
+    - name: busybox1
+      image: busybox
+      command:
+        - sleep
+        - "3600"
+      volumeMounts:
+      - mountPath: "/mnt"
+        name: test  
+  volumes:
+    - name: test  
+      persistentVolumeClaim:
+        claimName: nfs
